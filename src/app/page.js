@@ -1,23 +1,16 @@
 // src/app/page.js
-import React from 'react';
-import {
-  readFile,
-  writeFile,
-} from '../helpers/file-helpers';
+import React from "react";
+import { readFile, writeFile } from "../helpers/file-helpers";
 
-const DATABASE_PATH = '/src/database.json';
+const DATABASE_PATH = "/src/database.json";
+export const dynamic = "force-dynamic";
 
 function Home() {
-  let { hits } = JSON.parse(
-    readFile(DATABASE_PATH)
-  );
+  let { hits } = JSON.parse(readFile(DATABASE_PATH));
 
   hits += 1;
 
-  writeFile(
-    DATABASE_PATH,
-    JSON.stringify({ hits })
-  );
+  writeFile(DATABASE_PATH, JSON.stringify({ hits }));
 
   return (
     <main>
