@@ -21,7 +21,7 @@ module.exports = withBundleAnalyzer(
             {
               loader: "file-loader",
               options: {
-                name: "static/chunks/[hash].[ext]",
+                name: "static/chunks/database.json",
               },
             },
           ],
